@@ -51,11 +51,11 @@ def copyWithExt(dataToWrite, outputPath):
 ### Check for shared_preferences subfolder
 if('shared_prefs' in next(os.walk(cwd))[1]):
     ### If shared_preferences folder exisits, check for the file 'share_locked_vault.xml'
-    if(os.path.exists(os.path.join(cwd, 'shared_prefs\share_locked_vault.xml'))):
-        shared_prefs = (os.path.join(cwd, 'shared_prefs\share_locked_vault.xml'))
+    if(os.path.exists(os.path.join(cwd, 'shared_prefs', 'share_locked_vault.xml'))):
+        shared_prefs = (os.path.join(cwd, 'shared_prefs', 'share_locked_vault.xml'))
     ### Failing that, check for the file 'share_privacy_safe.xml'
-    elif(os.path.exists(os.path.join(cwd, 'shared_prefs\share_privacy_safe.xml'))):
-        shared_prefs = (os.path.join(cwd, 'shared_prefs\share_privacy_safe.xml'))
+    elif(os.path.exists(os.path.join(cwd, 'shared_prefs', 'share_privacy_safe.xml'))):
+        shared_prefs = (os.path.join(cwd, 'shared_prefs', 'share_privacy_safe.xml'))
     ### If we weren't able to find either, exit.
     else:
       print('\npreferences xml file could not be found, exiting')
